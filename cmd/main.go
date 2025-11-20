@@ -1,7 +1,7 @@
 package main
 
 import (
-	"log"
+	"log/slog"
 	"os"
 )
 
@@ -15,9 +15,12 @@ func main() {
 		config: cfg,
 	}
 
+	logger := slog.New(slog.NewTextHandler(os.Stdout, &slog.HandlerOptions{Level: slog.LevelInfo}))
+	slog.SetDefault(logger)
+
 	err := api.run(api.mount())
 	if err != nil {
-		log.Println("Server error:", err)
+		slog.Error("could not start server", "error", err)
 		os.Exit(1)
 	}
 }

@@ -1,0 +1,54 @@
+# Go build outputs
+/bin/
+/build/
+*.exe
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Coverage and profiling
+coverage.out
+*.coverprofile
+*.prof
+
+# Dependency directories
+vendor/
+# If you vendor dependencies, remove the previous line
+
+# Go workspace / pkg
+pkg/
+GOPATH/pkg/
+
+# Generated files
+*.exec
+*.modcache
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Logs and temp
+*.log
+tmp/
+*.tmp
+
+# IDEs and editors
+.vscode/
+.idea/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor swap/backup files
+*~
+*.swp
+*.swo
+
+#jsons
+.excalidraw.json
